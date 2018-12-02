@@ -1,4 +1,4 @@
-(let [input (map read-string (clojure.string/split (slurp *in*) #"\n"))
+(let [input (clojure.string/split (slurp *in*) #"\n")
       character-counts (map #(set (map count (partition-by identity (sort %)))) input)
       part1 (*
               (count (filter #(% 3) character-counts))
