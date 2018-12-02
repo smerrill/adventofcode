@@ -1,4 +1,4 @@
-(let [input (map read-string (slurp *in*))
+(let [input (map read-string (clojure.string/split (slurp *in*) #"\n"))
       frequencies (reductions + (cycle input))
       part1 (reduce + input)
       part2 (reduce
